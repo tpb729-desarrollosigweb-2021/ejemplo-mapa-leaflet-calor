@@ -55,7 +55,7 @@ $.getJSON("https://tpb729-desarrollosigweb-2021.github.io/datos/gbif/carnivora-c
   });
 
   // Capa de calor (heatmap)
-  coordenadas = geodata.features.map(feat => feat.geometry.coordinates.slice().reverse());
+  coordenadas = geodata.features.map(feat => feat.geometry.coordinates.reverse());
   var capa_carnivora_calor = L.heatLayer(coordenadas, {radius: 30, blur: 1});
 
   // Capa de puntos agrupados
