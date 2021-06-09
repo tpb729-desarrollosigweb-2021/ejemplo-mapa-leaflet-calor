@@ -9,12 +9,22 @@ var capa_osm = L.tileLayer(
     maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }
-).addTo(mapa);	
+).addTo(mapa);
+
+var capa_cartoDB_darkMatter = L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', 
+    {
+	  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	  subdomains: 'abcd',
+	  maxZoom: 19
+    }
+).addTo(mapa);
 
 
 // Conjunto de capas base
 var capas_base = {
-  "OSM": capa_osm
+  "OSM": capa_osm,
+  "CartoDB Dark Matter": capa_cartoDB_darkMatter
 };	    
 
 
